@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="b786a8c2-8fb1-4afd-a8af-a0d1b79d54f1" absoluteBounds="4.25, 1.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClasses1DataContext/intrari" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c274678-8879-4ac4-9c12-1f1c52131900" absoluteBounds="4.265, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c116236-91fe-48cc-82f2-5ac786f31885" absoluteBounds="7.5, 0.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClasses1DataContext/parteneri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="099fa24b-128f-4c19-b7fc-95036b45d986" absoluteBounds="7.515, 1.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.5 : 1.88544840494792); (6.25 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/parteneri/parteneri_intrari" />
+      <nodes>
+        <classShapeMoniker Id="9c116236-91fe-48cc-82f2-5ac786f31885" />
+        <classShapeMoniker Id="b786a8c2-8fb1-4afd-a8af-a0d1b79d54f1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b9cb116c-be24-4023-a0e8-f620146e4bf0" absoluteBounds="7.5, 3.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/produse" />
+      <nestedChildShapes>
+        <elementListCompartment Id="566a5333-185a-493f-b443-8ee8a987dbfd" absoluteBounds="7.515, 4.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c131431b-08d1-42fe-a7d0-84f699366a56" absoluteBounds="2, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClasses1DataContext/intrari_detaliu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a71b51b5-b104-4176-800f-27758993ede5" absoluteBounds="2.0149999999999997, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.5 : 3.71875); (3.375 : 3.71875); (3.375 : 2.27089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/produse/produse_intrari_detaliu" />
+      <nodes>
+        <classShapeMoniker Id="b9cb116c-be24-4023-a0e8-f620146e4bf0" />
+        <classShapeMoniker Id="c131431b-08d1-42fe-a7d0-84f699366a56" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b8368939-cd3d-4723-9aee-7911fb59080d" absoluteBounds="3.625, 4.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/iesiri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b30f810d-1e6a-4c20-a001-372303c661d2" absoluteBounds="3.64, 4.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f3289fe-a1fd-4def-8c91-241cc7e595d0" absoluteBounds="1.125, 3.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/gestiuni" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d3a9a0ee-8a22-4335-be5c-9496e2153710" absoluteBounds="1.1399999999999997, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.53125 : 3.875); (1.53125 : 2.73964680989583); (3.29166666666667 : 2.73964680989583 : JumpStart); (3.45833333333333 : 2.73964680989583 : JumpEnd); (4.25 : 2.73964680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/gestiuni/gestiuni_intrari" />
+      <nodes>
+        <classShapeMoniker Id="8f3289fe-a1fd-4def-8c91-241cc7e595d0" />
+        <classShapeMoniker Id="b786a8c2-8fb1-4afd-a8af-a0d1b79d54f1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

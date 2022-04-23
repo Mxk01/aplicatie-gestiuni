@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Proiect" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-OBTP981;Initial Catalog=Proiect;Integrated Security=True" SettingsObjectName="ProiectCC1.Properties.Settings" SettingsPropertyName="ProiectConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.intrari" Member="intraris">
+    <Type Name="intrari">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="numar" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="partener" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="gestiune" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="parteneri_intrari" Member="parteneri" ThisKey="partener" OtherKey="ID" Type="parteneri" IsForeignKey="true" />
+      <Association Name="gestiuni_intrari" Member="gestiuni" ThisKey="gestiune" OtherKey="ID" Type="gestiuni" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.parteneri" Member="parteneris">
+    <Type Name="parteneri">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="denumire" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="cui" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="adresa" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="parteneri_intrari" Member="intraris" ThisKey="ID" OtherKey="partener" Type="intrari" />
+    </Type>
+  </Table>
+  <Table Name="dbo.produse" Member="produses">
+    <Type Name="produse">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cod" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="denumire" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="pret_unitar" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="produse_intrari_detaliu" Member="intrari_detalius" ThisKey="ID" OtherKey="produs" Type="intrari_detaliu" />
+    </Type>
+  </Table>
+  <Table Name="dbo.intrari_detaliu" Member="intrari_detalius">
+    <Type Name="intrari_detaliu">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_intrari" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="produs" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="cantitate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="valoare" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="produse_intrari_detaliu" Member="produse" ThisKey="produs" OtherKey="ID" Type="produse" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.iesiri" Member="iesiris">
+    <Type Name="iesiri">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nr" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="gestiunea" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.gestiuni" Member="gestiunis">
+    <Type Name="gestiuni">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cod" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="denumire" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="gestiuni_intrari" Member="intraris" ThisKey="ID" OtherKey="gestiune" Type="intrari" />
+    </Type>
+  </Table>
+</Database>
