@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Proiect" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-OBTP981;Initial Catalog=Proiect;Integrated Security=True" SettingsObjectName="ProiectCC1.Properties.Settings" SettingsPropertyName="ProiectConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.intrari" Member="intraris">
-    <Type Name="intrari">
+    <Type Name="intrari"> 
       <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="numar" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
       <Column Name="data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
